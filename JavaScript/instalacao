@@ -1,0 +1,3 @@
+npm config get prefix
+
+npm install -g typescript

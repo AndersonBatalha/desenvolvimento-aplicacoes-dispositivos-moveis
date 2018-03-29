@@ -1,0 +1,57 @@
+.secao {
+	width: 33.33%;
+	display: inline-block;
+	float: left;
+	padding-right: 3%;
+}
+
+.chamada.mini{
+	width: 50%;
+	float: left;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.barra-nav .menu-principal li {
+	float: left;
+	padding: 0px 20px;
+}
+
+.logo {
+	display: inline-block;
+	float: left;
+}
+
+.destaques {
+	padding-top: 2.5em;
+}
+
+header {
+	margin: 0.5em;
+	padding: 1.5em;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 1.2em;
+	}
+	.secao {
+		float: none;
+	}
+}
+
+@media (max-width: 1000px) {
+	body {
+		font-size: 1.25em;
+	}
+	.secao {
+		float: none;
+	}
+}
+
+div a img {
+	max-width: 100%;
+}

@@ -1,0 +1,55 @@
+<!--
+  Generated template for the DataBindingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>data-binding</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <p>O valor de 1 + 1: {{ 1 + 1 }}</p>
+    <p>O valor de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+
+    <h2>Property Binding</h2>
+    <img src="{{ imgURL }}" alt="" />
+    <img [src]="imgURL" alt="" />
+    <img bind-src="imgURL" alt="" />
+
+    <h2>Event Binding</h2>
+    <button ion-button block large (click)="botaClicadoEvent()">me clique!</button>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Texto</ion-label>
+            <ion-input #campoInput type="text" (keyup)="textoDigitadoEvent($event)" (keyup.enter)="salvarTexto()" (blur)="salvarTexto()"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-card>
+
+        <ion-card-content>
+            <p>O valor atual do campo: {{ valorAtual }}</p>
+            <p>O valor salvo: {{ valorSalvo }}</p>
+            <p>O valor salvo: {{ campoInput.value }}</p>
+            <p>Tamanho da string: {{ campoInput.value.length }}</p>
+        </ion-card-content>
+
+    </ion-card>
+
+
+    <!--<input #campoInput type='text' (keyup)="textoDigitadoEvent($event)" (keyup.enter)="salvarTexto()" (blur)="salvarTexto()">-->
+    <!-- $event.target.value -->
+
+    <!--<div style="border: solid 1px; height: 10em;" [class.sucess]="campoInput.value.length > 3"></div>-->
+
+
+
+</ion-content>
