@@ -1,5 +1,5 @@
 # desenvolvimento-aplicacoes-dispositivos-moveis
-IFC Araquari - Sistemas de Informação
+IFC Araquari - Sistemas de Informação\n
 Desenvolvimento de uma aplicação utilizando o Framework Ionic
 
 Dependências
