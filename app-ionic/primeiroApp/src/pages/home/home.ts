@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HelloWorldPage } from '../hello-world/hello-world';
+//import { DataBindingPage } from '../data-binding/data-binding';
+//import { TesteComponentePage } from '../teste-componente/teste-componente';
 
 @Component({
   selector: 'page-home',
@@ -12,19 +14,16 @@ export class HomePage {
 
   }
 
-  private menu(pagina:string) {
+  private menu(pagina: string) {
     console.log('Clicou no botão')
 
     switch (pagina) {
       case "HelloWorldPage":
         this.navCtrl.push(HelloWorldPage)
         break;
-    
-      case "DataBindingPage":
-        this.navCtrl.push(pagina)
-        break;
-    
+
       default:
+        this.navCtrl.push(pagina)
         break;
     }
 
