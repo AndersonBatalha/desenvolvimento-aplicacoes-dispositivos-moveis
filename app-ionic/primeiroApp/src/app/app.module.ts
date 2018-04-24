@@ -9,6 +9,10 @@ import { HomePage } from '../pages/home/home';
 import { HelloWorldPage } from '../pages/hello-world/hello-world';
 import { TesteComponentePageModule } from '../pages/teste-componente/teste-componente.module';
 import { DataBindingPageModule } from '../pages/data-binding/data-binding.module';
+import { PostsProvider } from '../providers/posts/posts';
+import { HttpClientModule } from '@angular/common/http';
+import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
+import { DetalhesPage } from '../pages/detalhes/detalhes';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { DataBindingPageModule } from '../pages/data-binding/data-binding.module
     BrowserModule,
     DataBindingPageModule,
     TesteComponentePageModule,
+    HttpClientModule,
+    DetalhesPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -27,11 +33,13 @@ import { DataBindingPageModule } from '../pages/data-binding/data-binding.module
     MyApp,
     HomePage,
     HelloWorldPage,
+    DetalhesPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PostsProvider,
   ]
 })
 export class AppModule {}

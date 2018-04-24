@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { HelloWorldPage } from '../hello-world/hello-world';
-//import { DataBindingPage } from '../data-binding/data-binding';
-//import { TesteComponentePage } from '../teste-componente/teste-componente';
+import { PostsProvider } from '../../providers/posts/posts';
+import { DetalhesPage } from '../detalhes/detalhes';
 
 @Component({
   selector: 'page-home',
@@ -10,12 +10,33 @@ import { HelloWorldPage } from '../hello-world/hello-world';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  protected posts:any;
 
+  constructor(
+    private loading: LoadingController, 
+    public navCtrl: NavController, 
+    public postsProv: PostsProvider) {
+
+    let load = this.loading.create({content: 'carregando...'});
+    load.present()
+    
+    this.postsProv.getAll().subscribe( 
+      (sucesso)=>{
+        this.posts = sucesso;
+        load.dismiss();
+      },
+      (erro)=>{
+        console.error('problema na requisição' + erro);
+      }
+    );
+    console.log(this.posts)
+  }
+
+  protected abrirPosts(id:any) {
+    this.navCtrl.push(DetalhesPage, {id: id})
   }
 
   private menu(pagina: string) {
-    console.log('Clicou no botão')
 
     switch (pagina) {
       case "HelloWorldPage":

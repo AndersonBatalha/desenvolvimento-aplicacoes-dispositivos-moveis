@@ -9,6 +9,6 @@ import { ContadorComponent } from './contador/contador';
     ContadorComponent],
 	imports: [IonicModule],
 	exports: [CardComponent,
-    ContadorComponent]
+	ContadorComponent],
 })
 export class ComponentsModule {}

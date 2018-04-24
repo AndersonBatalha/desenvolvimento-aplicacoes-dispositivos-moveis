@@ -15,6 +15,6 @@
 <ion-content>
     <app-card [feed]='meuFeed'></app-card>
     <app-card [feed]='meuFeed2'></app-card>
-    <contador [inicial]='3'></contador>
+    <contador [inicial]='3' (onMudarValor)='testeValor($event)'></contador>
     <contador [inicial]='1' (onMudarValor)='testeValor($event)'></contador>
 </ion-content>
