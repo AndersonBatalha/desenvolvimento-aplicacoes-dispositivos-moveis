@@ -5,10 +5,14 @@ import { CardComponent } from './card/card';
 import { ContadorComponent } from './contador/contador';
 
 @NgModule({
-	declarations: [CardComponent,
-    ContadorComponent],
+	declarations: [
+		CardComponent,
+    	ContadorComponent,
+	],
 	imports: [IonicModule],
-	exports: [CardComponent,
-	ContadorComponent],
+	exports: [
+		CardComponent,
+		ContadorComponent,
+    ],
 })
 export class ComponentsModule {}

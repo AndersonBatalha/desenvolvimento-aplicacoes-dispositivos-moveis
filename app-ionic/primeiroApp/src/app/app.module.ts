@@ -13,6 +13,12 @@ import { PostsProvider } from '../providers/posts/posts';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
 import { DetalhesPage } from '../pages/detalhes/detalhes';
+import { FormLoginPageModule } from '../pages/form-login/form-login.module';
+import { FormLoginPage } from '../pages/form-login/form-login';
+import { TemplateDrivenPage } from '../pages/template-driven/template-driven';
+import { DataDrivenPage } from '../pages/data-driven/data-driven';
+import { TemplateDrivenPageModule } from '../pages/template-driven/template-driven.module';
+import { DataDrivenPageModule } from '../pages/data-driven/data-driven.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +32,10 @@ import { DetalhesPage } from '../pages/detalhes/detalhes';
     TesteComponentePageModule,
     HttpClientModule,
     DetalhesPageModule,
+    FormLoginPageModule,
+    TemplateDrivenPageModule,
+    DataDrivenPageModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -33,7 +43,10 @@ import { DetalhesPage } from '../pages/detalhes/detalhes';
     MyApp,
     HomePage,
     HelloWorldPage,
+    FormLoginPage,
     DetalhesPage,
+    TemplateDrivenPage,
+    DataDrivenPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,31 @@
+<!--
+  Generated template for the FormLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>formLogin</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form (ngSubmit)="validateForm()">
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="email" [(ngModel)]="user.usuario" name="usuario" min='4' required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.senha" name="senha" min='4' max='25' required></ion-input>
+        </ion-item>
+        <button ion-button block large type='submit'>Submit</button>
+    </form>
+
+</ion-content>
